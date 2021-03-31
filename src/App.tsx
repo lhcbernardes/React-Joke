@@ -1,5 +1,6 @@
-import { Form, Row, Button, Container, Col } from 'react-bootstrap';
-import React, { useState, useEffect, Fragment } from 'react';
+import { Form, Container } from 'react-bootstrap';
+import React from 'react';
+import Button from 'react-bootstrap/Button';
 import './App.css';
 
 class Intro extends React.Component  {
@@ -17,70 +18,105 @@ class Intro extends React.Component  {
 
   render() {
   return (
-    <Container fluid="md">
+    <Container className="p-3">
       <Form>
-        
           <Form.Label>Select category / categories:</Form.Label>
           <Form.Group controlId="category">
-              <Form.Check inline type="checkbox" label="Programming" id="Programming"/>
-              <Form.Check inline type="checkbox" label="Misc" id="Misc"/>
-              <Form.Check inline type="checkbox" label="Dark" id="Dark"/>
-              <Form.Check inline type="checkbox" label="Pun" id="Pun"/>
-              <Form.Check inline type="checkbox" label="Spook" id="Spook"/>
-              <Form.Check inline type="checkbox" label="Christmas" id="Christmas"/>
+              <Form.Check 
+                custom
+                inline 
+                type="checkbox" 
+                label="Programming" 
+                id="Programming"
+              />
+              <Form.Check 
+              custom
+                inline 
+                type="checkbox" 
+                label="Misc" 
+                id="Misc"
+              />
+              <Form.Check
+              custom 
+                inline 
+                type="checkbox" 
+                label="Dark" 
+                id="Dark"
+              />
+              <Form.Check 
+              custom
+                inline 
+                type="checkbox" 
+                label="Pun" 
+                id="Pun"
+              />
+              <Form.Check 
+              custom
+                inline 
+                type="checkbox" 
+                label="Spook" 
+                id="Spook"
+              />
+              <Form.Check 
+              custom
+                inline 
+                type="checkbox" 
+                label="Christmas" 
+                id="Christmas"
+              />
           </Form.Group>
-        
+          <Form.Control.Feedback type="valid">You did it!</Form.Control.Feedback>
 
         {/* <Form.Group controlId="formBasicPassword">
           <Form.Label>Password</Form.Label>
           <Form.Control type="password" placeholder="Password" />
         </Form.Group> */}
         <Form.Label>Select flags to blacklist:</Form.Label>
-          <div key="custom-inline-checkbox" className="mb-3">
+        <Form.Group controlId="flags">
             <Form.Check
               custom
               inline
-              label="nsfw"
+              label="Nsfw"
               type="checkbox"
               id="nsfw"
             />
             <Form.Check
               custom
               inline
-              label="religious"
+              label="Religious"
               type="checkbox"
               id="religious"
             />
             <Form.Check
               custom
               inline
-              label="political"
+              label="Political"
               type="checkbox"
               id="political"
             />
             <Form.Check
               custom
               inline
-              label="racist"
+              label="Racist"
               type="checkbox"
               id="racist"
             />
             <Form.Check
               custom
               inline
-              label="sexist"
+              label="Sexist"
               type="checkbox"
               id="sexist"
             />
              <Form.Check
               custom
               inline
-              label="explicit"
+              label="Explicit"
               type="checkbox"
               id="explicit"
             />
-          </div>
-        <Button className="btn-lg" variant="primary" type="submit">
+          </Form.Group>
+        <Button className="btn-md mb-3" color="danger" type="submit">
           Submit
         </Button>
       </Form>
